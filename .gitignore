@@ -1,0 +1,5 @@
+.venv
+.ipynb_checkpoints
+__pycache__
+Day-1.ipynb
+.env
