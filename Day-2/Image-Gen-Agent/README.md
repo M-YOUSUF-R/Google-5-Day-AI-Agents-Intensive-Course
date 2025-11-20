@@ -4,7 +4,7 @@
 If tools are long-running or needed human approval before completing an action.
 this example describe the process to add human approval with agentic workflow.
 
-Example: A image-gen agent should ask for approval before generating a large number of image.
+Example: A image-gen agent using MCP server should ask for approval before generating a large number of image.
 ```
 User asks → Agent calls tool → Tool PAUSES and asks human → Human approves → Tool completes → Agent responds
 ```
