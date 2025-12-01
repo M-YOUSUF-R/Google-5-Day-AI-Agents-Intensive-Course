@@ -1,0 +1,79 @@
+{
+  "eval_set_id": "home_automation_test_01",
+  "name": "home_automation_test_01",
+  "eval_cases": [
+    {
+      "eval_id": "basics_device_control",
+      "conversation": [
+        {
+          "invocation_id": "e-2b6a5253-33ee-4510-88f0-54a17d1b8214",
+          "user_content": {
+            "parts": [
+              {
+                "text": "Turn on the desk lamp in the office"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "The desk lamp is off"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "HomeAutomationAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-231ebfba-6b92-4adc-b03c-32aa0d40e4ea",
+                        "args": {
+                          "device_id": "desk lamp",
+                          "location": "office",
+                          "status": "ON"
+                        },
+                        "name": "set_device_status"
+                      },
+                      "thought_signature": "CuwBAXLI2nyr3rHxtIBMKiXQAIycOm5j08tWcvTYU6-Nl21NzHEFFkn0tIyL-ppqMIGX6AKg74xsUrgF9hNga-F7QbfrmagjdfMal33jLbU-AEMojbsyEMU35tCIchhSZuDcpN8k0pXhDN27377sTnBHOaNaQ1Z4HdX1A7SiKKAjL2ELbQp5n4zlaAn-Nqzz1RcjjERO2KO0Lr61qHnVYOr6JmLeKv7CqSsI9jlgXzaUvZqxp6SUQVdA6f_PS9-cmruojlLZM7MOLMkYuGsw_Rye5eCv4nXiQNAtusVDcdEIzxA9oVp9VWqswYk5MJY="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "HomeAutomationAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-231ebfba-6b92-4adc-b03c-32aa0d40e4ea",
+                        "name": "set_device_status",
+                        "response": {
+                          "status": true,
+                          "message": "successfully set the {device_id} in the {location} to {status.lower()} "
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1764593264.304485
+        }
+      ],
+      "session_input": {
+        "app_name": "HomeAutomationAgent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1764593362.0413907
+    }
+  ],
+  "creation_timestamp": 1764593329.8006372
+}

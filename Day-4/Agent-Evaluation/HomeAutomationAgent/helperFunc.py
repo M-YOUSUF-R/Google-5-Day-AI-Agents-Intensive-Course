@@ -1,0 +1,22 @@
+def set_device_status(
+    location:str,
+    device_id:str,
+    status:str)->dict:
+
+    """Sets the status of a smart home device.
+
+        Args:
+            location: The room where the device is located.
+            device_id: The unique identifier for the device.
+            status: The desired status, either 'ON' or 'OFF'.
+
+        Returns:
+            A dictionary confirming the action.
+        """
+
+    print(f"Tool Call: Setting {device_id} in {location} to {status}")
+    return {
+            "status":True,
+            "message":"successfully set the {device_id} in the {location} to {status.lower()} "
+        }
+
